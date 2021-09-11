@@ -191,7 +191,7 @@ sub cleanup
 foreach my $mirror (@ARGV) {
 	if ($mirror =~ /^\@SF\/(.+)$/) {
 		# give sourceforge a few more tries, because it redirects to different mirrors
-		for (1 .. 5) {
+		for (1 .. 1) {
 			push @mirrors, "https://downloads.sourceforge.net/$1";
 		}
 	} elsif ($mirror =~ /^\@OPENWRT$/) {
